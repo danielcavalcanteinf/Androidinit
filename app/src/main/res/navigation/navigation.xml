@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listaClientesFragment">
+    <fragment
+        android:id="@+id/listaClientesFragment"
+        android:name="com.example.clientesapp.ui.ListaClientesFragment"
+        android:label="ListaClientesFragment"
+        tools:layout="@layout/fragment_lista_clientes">
+        <action
+            android:id="@+id/action_listaClientesFragment_to_novoClienteFragment"
+            app:destination="@id/novoClienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/novoClienteFragment"
+        android:name="com.example.clientesapp.ui.NovoClienteFragment"
+        android:label="NovoClienteFragment"
+        tools:layout="@layout/fragment_novo_cliente"/>
 </navigation>
