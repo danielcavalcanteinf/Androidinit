@@ -23,14 +23,10 @@ class ListaClientesFragment : Fragment() {
     }
 
     override fun onResume() {
-        super.onResume()
+    super.onResume()
 
-        btnNovoCliente.setOnClickListener {
-            it.findNavController()
-                .navigate(R.id.action_listaClientesFragment_to_novoClienteFragment)
-        }
-        viewModel = ViewModelProviders.of(this).get(ListaClientesViewModel::class.java)
-
-
+    btnNovoCliente.setOnClickListener {
+      it.findNavController().navigate(R.id.action_listaClientesFragment_to_novoClienteFragment)
+    }
     }
 }

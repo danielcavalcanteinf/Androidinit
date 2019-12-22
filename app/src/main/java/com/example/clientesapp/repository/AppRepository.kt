@@ -9,6 +9,9 @@ class AppRepository (context: Context){
 
     fun getTodos() = database.Dao().getTodos()
 
+    fun setCliente() = database.Dao().addCliente()
+
+
 
 
 }

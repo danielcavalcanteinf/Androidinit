@@ -12,11 +12,11 @@ data class Cliente(
     val codigo : Int,
 
     @ColumnInfo(name = "nome")
-    val nome : String,
+    var nome : String,
 
     @ColumnInfo(name = "fone")
-    val telefone : String,
+    var telefone : String,
 
-    val endereco : String/*,
-    val datanasc : Date*/
+    var endereco : String,
+    var datanasc : String
 )

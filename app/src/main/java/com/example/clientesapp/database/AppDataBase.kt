@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.clientesapp.models.Cliente
 
-@Database(entities = [Cliente::class], version = 1)
+@Database(entities = arrayOf(Cliente::class), version = 1)
 abstract class AppDataBase() : RoomDatabase() {
 
     abstract fun Dao() : ClientesDAO
