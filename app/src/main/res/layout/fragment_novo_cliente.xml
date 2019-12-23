@@ -1,55 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <EditText
-        android:id="@+id/inputNomeProduto"
+        android:id="@+id/inputNomeCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
         android:layout_marginTop="4dp"
-        android:hint="Nome do Cliente"/>
+        android:layout_marginEnd="4dp"
+        android:hint="Nome do Cliente"
+        android:singleLine="true"
+        android:maxLength="60"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/inputTelefone"/>
 
     <EditText
         android:id="@+id/inputTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
         android:layout_marginTop="4dp"
-        android:hint="Telefone"/>
+        android:layout_marginEnd="4dp"
+        android:hint="Telefone"
+        android:singleLine="true"
+        android:maxLength="12"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/inputEndereco"/>
 
     <EditText
         android:id="@+id/inputEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
         android:layout_marginTop="4dp"
-        android:hint="Endereço"/>
+        android:layout_marginEnd="4dp"
+        android:hint="Endereço"
+        android:maxLines="3"
+        android:maxLength="250"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/inputDataNasc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
         android:layout_marginTop="4dp"
-        android:hint="Data de Nascimento"
-        android:ems="10"
-        android:inputType="date"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_cadastrar"
-        android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginTop="4dp"/>
+        android:ems="10"
+        android:hint="Data de Nascimento"
+        android:inputType="date"
+        android:singleLine="true"
+        android:maxLength="10"
+        android:imeOptions="actionDone"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cadastrar" />
+    </RelativeLayout>
 
 </LinearLayout>

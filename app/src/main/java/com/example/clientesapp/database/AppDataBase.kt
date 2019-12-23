@@ -6,12 +6,30 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.clientesapp.models.Cliente
 
-@Database(entities = arrayOf(Cliente::class), version = 1)
-abstract class AppDataBase() : RoomDatabase() {
+@Database(entities = [Cliente::class], version = 3)
+abstract class AppDataBase : RoomDatabase() {
 
     abstract fun Dao() : ClientesDAO
 
     companion object {
+        var INSTANCE : AppDataBase? = null
+
+        fun getInstance(context : Context) : AppDataBase {
+            return if(INSTANCE == null) {
+                INSTANCE=  Room.databaseBuilder(
+                    context,
+                    AppDataBase::class.java,
+                    "database.db"
+                ).fallbackToDestructiveMigration().build()
+
+                INSTANCE as AppDataBase
+            } else {
+                INSTANCE as AppDataBase
+            }
+        }
+    }
+
+    /*companion object {
         var INSTANCE : AppDataBase? = null
 
         fun getInstance(context : Context) : AppDataBase {
@@ -20,11 +38,11 @@ abstract class AppDataBase() : RoomDatabase() {
                     context,
                     AppDataBase::class.java,
                     "database.db"
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE as AppDataBase
             }  else {
                 INSTANCE as AppDataBase
             }
         }
-    }
+    }*/
 }
