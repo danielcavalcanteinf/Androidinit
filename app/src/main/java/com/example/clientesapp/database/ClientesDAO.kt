@@ -11,7 +11,7 @@ interface ClientesDAO {
     fun getTodosClientes() : List<Cliente>
 
     @Query("select * from clientes")
-    fun getTodos() : LiveData<List<Cliente>>
+    fun getTodosLiveData() : LiveData<List<Cliente>>
 
     @Insert
     fun addCliente(novoCliente: Cliente)

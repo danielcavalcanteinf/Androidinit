@@ -7,11 +7,6 @@ import com.example.clientesapp.models.Cliente
 class AppRepository (context: Context){
     val database = AppDataBase.getInstance(context)
 
-    fun getTodos() = database.Dao().getTodos()
-
-    fun setCliente() = database.Dao().addCliente()
-
-
-
+    fun getTodosLiveData() = database.Dao().getTodosLiveData()
 
 }

@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listaClientesFragment"
         android:name="com.example.clientesapp.ui.ListaClientesFragment"
-        android:label="ListaClientesFragment"
+        android:label="Lista de Clientes"
         tools:layout="@layout/fragment_lista_clientes">
         <action
             android:id="@+id/action_listaClientesFragment_to_novoClienteFragment"
@@ -16,6 +16,6 @@
     <fragment
         android:id="@+id/novoClienteFragment"
         android:name="com.example.clientesapp.ui.NovoClienteFragment"
-        android:label="NovoClienteFragment"
+        android:label="Cadastrar Cliente"
         tools:layout="@layout/fragment_novo_cliente"/>
 </navigation>

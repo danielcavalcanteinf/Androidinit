@@ -11,7 +11,7 @@ class ListaClientesViewModel(application: Application) : AndroidViewModel(applic
     init {
         appRepository.database
     }
-    fun getTodosClientes() = appRepository.getTodos()
+    fun getTodosClientes() = appRepository.getTodosLiveData()
 
     fun salvarCliente(novoCliente : Cliente) {
 
