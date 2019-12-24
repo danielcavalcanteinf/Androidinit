@@ -12,8 +12,6 @@ import com.example.clientesapp.R
 import com.example.clientesapp.commons.Adapter
 import kotlinx.android.synthetic.main.fragment_lista_clientes.*
 
-
-
 class ListaClientesFragment : Fragment() {
 
     lateinit var viewModel: ListaClientesViewModel

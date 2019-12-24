@@ -14,10 +14,7 @@ class ListaClientesViewModel(application: Application) : AndroidViewModel(applic
     fun getTodosClientes() = appRepository.getTodosLiveData()
 
     fun salvarCliente(novoCliente : Cliente) {
-        // ante o novoCliente não estava sendo utilizado
-        // agora está
-        //Mas o erro agora é porque o salvarNovoCliente não está esperando um cliente
+
         appRepository.salvarNovoCliente(novoCliente)
     }
-
 }

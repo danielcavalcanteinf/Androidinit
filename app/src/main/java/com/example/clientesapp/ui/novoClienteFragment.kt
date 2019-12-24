@@ -39,10 +39,12 @@ class NovoClienteFragment : Fragment() {
 
                 var novoCliente = Cliente(id, nome, telefone, endereco, datanasc)
 
-                // isso aqui está certo
+
                 viewModel.salvarCliente(novoCliente)
+                Toast.makeText(context, "Cliente Salvo!", Toast.LENGTH_SHORT).show()
 
                 it.findNavController().popBackStack()
+
             } catch (e : Exception) {
                 Toast.makeText(context, "Erro ao cadastrar cliente", Toast.LENGTH_SHORT).show()
                 it.findNavController().popBackStack()
