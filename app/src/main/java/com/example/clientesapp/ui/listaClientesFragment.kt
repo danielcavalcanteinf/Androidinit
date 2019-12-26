@@ -36,5 +36,13 @@ class ListaClientesFragment : Fragment() {
 
         viewModel.getTodosClientes().observe(this, Observer { clientes ->
             recyclerView.adapter = Adapter(clientes) })
+
+
+
     }
+
+
+
+
+
 }

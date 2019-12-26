@@ -37,7 +37,7 @@ class NovoClienteFragment : Fragment() {
                 var endereco = inputEndereco.text.toString()
                 var datanasc = inputDataNasc.text.toString()
 
-                var novoCliente = Cliente(id, nome, telefone, endereco, datanasc)
+                var novoCliente = Cliente(nome, telefone, endereco, datanasc)
 
 
                 viewModel.salvarCliente(novoCliente)

@@ -63,6 +63,4 @@
         app:layout_constraintTop_toBottomOf="@id/textView3"
         tools:text="@tools:sample/date/ddmmyy" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
