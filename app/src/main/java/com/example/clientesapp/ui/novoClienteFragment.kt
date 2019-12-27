@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import com.example.clientesapp.R
 import com.example.clientesapp.models.Cliente
 import kotlinx.android.synthetic.main.fragment_novo_cliente.*
+import org.jetbrains.anko.db.NULL
 
 class NovoClienteFragment : Fragment() {
 
@@ -38,6 +39,7 @@ class NovoClienteFragment : Fragment() {
                 var datanasc = inputDataNasc.text.toString()
 
                 var novoCliente = Cliente(nome, telefone, endereco, datanasc)
+
 
 
                 viewModel.salvarCliente(novoCliente)

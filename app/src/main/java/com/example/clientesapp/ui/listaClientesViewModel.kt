@@ -17,4 +17,5 @@ class ListaClientesViewModel(application: Application) : AndroidViewModel(applic
 
         appRepository.salvarNovoCliente(novoCliente)
     }
+
 }

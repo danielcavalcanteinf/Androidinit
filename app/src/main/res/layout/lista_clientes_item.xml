@@ -12,6 +12,7 @@
     android:foreground="?attr/selectableItemBackground">
 
     <RelativeLayout
+        android:id="@+id/card_cliente"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp">

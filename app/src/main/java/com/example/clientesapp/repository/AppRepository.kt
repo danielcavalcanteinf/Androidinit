@@ -17,4 +17,11 @@ class AppRepository (context: Context){
             database.Dao().addCliente(novoCliente)
         }
     }
+
+    fun deletarCliente(clienteDeletado: Cliente) {
+
+        doAsync {
+            database.Dao().deleteCliente(clienteDeletado)
+        }
+    }
 }
